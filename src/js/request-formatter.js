@@ -10,10 +10,10 @@ const captureTokenizedInputs = () => ({
 });
 
 const captureHiddenInputs = () => ({
-  mjrIdHdn: getInputValue("mjrIdHdn"),
-  fltIdHdn: getInputValue("fltIdHdn"),
-  sgIdHdn: getInputValue("sgIdHdn"),
-  prtTxt: getInputValue("prtTxt")
+  mjrIdHdn: getInputValue("ContentPlaceHolderright_ContentPlaceHoldercontent_mjrIdHdn"),
+  fltIdHdn: getInputValue("ContentPlaceHolderright_ContentPlaceHoldercontent_fltIdHdn"),
+  sgIdHdn: getInputValue("ContentPlaceHolderright_ContentPlaceHoldercontent_sgIdHdn"),
+  prtTxt: getInputValue("ContentPlaceHolderright_ContentPlaceHoldercontent_prtTxt")
 });
 
 const formatPayload = ({
@@ -38,17 +38,23 @@ const formatPayload = ({
     tokenizedInputs.viewStateGenerator
   )}&__EVENTVALIDATION=${encodeURIComponent(
     tokenizedInputs.eventValidation
-  )}&mjrIdHdn=${hidden.mjrIdHdn}&fltIdHdn=${hidden.fltIdHdn}&sgIdHdn=${
+  )}&ctl00$ctl00$ContentPlaceHolderright$ContentPlaceHoldercontent$mjrIdHdn=${
+    hidden.mjrIdHdn
+  }&ctl00$ctl00$ContentPlaceHolderright$ContentPlaceHoldercontent$fltIdHdn=${
+    hidden.fltIdHdn
+  }&ctl00$ctl00$ContentPlaceHolderright$ContentPlaceHoldercontent$sgIdHdn=${
     hidden.sgIdHdn
   }&${
     stdThesisIdLst
-      ? `stdThesisIdLst=${stdThesisIdLst}&rmvBtn=Remove+Thesis`
-      : `thesisIdLst=${thesisId}`
-  }&prtTxt=${hidden.prtTxt}`;
+      ? `ctl00$ctl00$ContentPlaceHolderright$ContentPlaceHoldercontent$stdThesisIdLst=${
+        stdThesisIdLst
+      }&ctl00$ctl00$ContentPlaceHolderright$ContentPlaceHoldercontent$rmvBtn=Remove+Thesis`
+      : `ctl00$ctl00$ContentPlaceHolderright$ContentPlaceHoldercontent$thesisIdLst=${thesisId}`
+  }&ctl00$ctl00$ContentPlaceHolderright$ContentPlaceHoldercontent$prtTxt=${hidden.prtTxt}`;
 
 const generateChooseThesisBody = thesisId =>
   formatPayload({
-    eventTarget: "thesisIdLst",
+    eventTarget: "ctl00$ctl00$ContentPlaceHolderright$ContentPlaceHoldercontent$thesisIdLst",
     tokenizedInputs: captureTokenizedInputs(),
     hidden: captureHiddenInputs(),
     thesisId

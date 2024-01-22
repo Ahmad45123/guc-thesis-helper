@@ -4,7 +4,7 @@
 */
 
 const estimateTime = ids => {
-  let totalSeconds = Number(ids) * 12;
+  let totalSeconds = Number(ids) * 40; // System seems to take 40 seconds per request :-D
   let totalMinutes = 0;
   if (totalSeconds > 60) {
     totalMinutes = parseInt(totalSeconds / 60);
@@ -24,7 +24,7 @@ const estimateTime = ids => {
 };
 
 const originalThesesContainer = document.querySelectorAll(
-  "#Table2 > tbody > tr:nth-child(2) > td:nth-child(2)"
+  ".main-card > .card-body"
 )[1];
 
 originalThesesContainer.appendChild(document.createElement("br"));
@@ -149,7 +149,7 @@ addSelectedThesesButton.addEventListener("click", async event => {
 originalThesesContainer.appendChild(addSelectedThesesButton);
 
 // ============================================= //
-const selectionList = document.getElementById("thesisIdLst");
+const selectionList = document.getElementById(thesisIdLstId);
 
 // ================FILTERING================ //
 const searchInput = document.createElement("input");
@@ -160,18 +160,10 @@ selectionList.parentNode.appendChild(searchInput);
 /*
   This is done just to remove the old event listener, it's ugly and bad :')
 */
+selectionList.setAttribute("onchange", "return false;");
 const selectionListClone = selectionList.cloneNode(true);
 selectionList.parentNode.appendChild(selectionListClone);
 selectionList.parentNode.removeChild(selectionList);
-
-// Remove the postback method causing random refreshes on selecting an item from the list.
-let myScript = document.createElement("script");
-myScript.setAttribute("type", "text/javascript");
-myScript.textContent = `oldDoPostBack = __doPostBack; __doPostBack = function(target, args) {
-  if(target == "thesisIdLst") return;
-  else oldDoPostBack(target, args);
-};`;
-(document.head||document.documentElement).appendChild(myScript);
 
 // ================Selection List Filtering================ //
 searchInput.addEventListener("input", (ev) => {
@@ -182,7 +174,6 @@ searchInput.addEventListener("input", (ev) => {
 });
 
 // ================ADDITION LISTENERS================ //
-
 const addToSortableList = node => {
   const id = "SO__" + node.value;
   const sortableEntry = document.createElement("li");

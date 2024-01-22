@@ -11,7 +11,10 @@ const HEADERS = {
 const REQUEST_CONFIG = {
   credentials: "include",
   headers: HEADERS,
-  referrer: "https://student.guc.edu.eg/External/Thesis/ChooseThesis.aspx",
+  referrer: "https://apps.guc.edu.eg/student_ext/Thesis/ChooseThesis_01.aspx",
   referrerPolicy: "no-referrer-when-downgrade",
   method: "POST"
 };
+
+const thesisIdLstId = "ContentPlaceHolderright_ContentPlaceHoldercontent_thesisIdLst";
+const stdThesisIdLstId = "ContentPlaceHolderright_ContentPlaceHoldercontent_stdThesisIdLst";

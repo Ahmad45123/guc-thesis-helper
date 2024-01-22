@@ -1,11 +1,11 @@
 const addThesisRequest = id =>
-  fetch("https://student.guc.edu.eg/External/Thesis/ChooseThesis.aspx", {
+  fetch("https://apps.guc.edu.eg/student_ext/Thesis/ChooseThesis_01.aspx", {
     ...REQUEST_CONFIG,
     body: generateChooseThesisBody(id)
   });
 
 const removeThesisRequest = id =>
-  fetch("https://student.guc.edu.eg/External/Thesis/ChooseThesis.aspx", {
+  fetch("https://apps.guc.edu.eg/student_ext/Thesis/ChooseThesis_01.aspx", {
     ...REQUEST_CONFIG,
     body: generateRemoveThesisBody(id)
   });

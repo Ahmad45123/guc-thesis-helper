@@ -6,10 +6,6 @@ A chrome extension to help GUC students deal with the thesis prioritization syst
 
 ## Installation
 
-#### Chrome Store :rocket:
-
-Extension is now live on :tada: [Chrome webstore](https://chrome.google.com/webstore/detail/guc-thesis-helper/moefbpbkffafidnhfelbkhoondeledam) :tada:
-
 #### Manual Installation :hammer_and_pick:
 
 You can visit the [releases](https://github.com/AbdullahKady/guc-thesis-helper/releases), download the latest `packed extension` (look for the `.crx` file), open it in chrome to install.

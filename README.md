@@ -20,15 +20,9 @@ You can visit the [releases](https://github.com/AbdullahKady/guc-thesis-helper/r
 
 **Hover** on each button for a detailed description of the action to follow!
 
-**Important:** Make sure you're on the `External/Thesis/ChooseThesis.aspx` URL [(here)](https://apps.guc.edu.eg/student_ext/Thesis/ChooseThesis_01.aspx). Loading the page while having the window location (the address bar) pointing to other location (_which is the normal behavior if you click on `Choose Thesis` from the admin system_) will not work.
-
-This is done **purposefully**, to minimize the extension's permissions, that way, the extension has no access to the rest of the admin system.
-
 ## Important Notes :books:
 
 - **DON'T** stop any operation mid-way (after starting an operation like submitting/clearing), it will mostly result in inconsistency with the system. If an operation is interrupted, it's recommended to `Clear`, and start again.
-
-- If you want to access the original system operations, rather than disabling the extension, you can just access the system from the admin system, having a the default admin system as the URL will not trigger the extension to work.
 
 - The system is super slow, so give it time :hourglass:. One request takes up on average ~30seconds, you will see a progress indicator showing up when an operation is started.
 

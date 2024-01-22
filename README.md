@@ -8,7 +8,12 @@ A chrome extension to help GUC students deal with the thesis prioritization syst
 
 #### Manual Installation :hammer_and_pick:
 
-You can visit the [releases](https://github.com/AbdullahKady/guc-thesis-helper/releases), download the latest `packed extension` (look for the `.crx` file), open it in chrome to install.
+1. Download the extension ZIP file by clicking on `Code -> Dowmload Zip` or by following [this link](https://codeload.github.com/Ahmad45123/guc-thesis-helper/zip/refs/heads/master).
+2. Extract the zip into some folder anywhere on your device.
+3. Goto Chrome Extensions settings at [chrome://extensions/](chrome://extensions/)
+4. Enable Developer Mode by ticking the switch on the top right.
+5. Click `Load Unpacked` and select the folder you had extracted.
+6. Enjoy!
 
 ## Usage :checkered_flag:
 

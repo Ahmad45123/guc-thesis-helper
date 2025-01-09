@@ -8,12 +8,23 @@ A chrome extension to help GUC students deal with the thesis prioritization syst
 
 #### Manual Installation :hammer_and_pick:
 
+### Google Chrome
 1. Download the extension ZIP file by clicking on `Code -> Dowmload Zip` or by following [this link](https://codeload.github.com/Ahmad45123/guc-thesis-helper/zip/refs/heads/master).
 2. Extract the zip into some folder anywhere on your device.
 3. Goto Chrome Extensions settings at [chrome://extensions/](chrome://extensions/)
 4. Enable Developer Mode by ticking the switch on the top right.
 5. Click `Load Unpacked` and select the folder you had extracted.
 6. Enjoy!
+
+### Firefox
+1. Download the extension ZIP file by clicking on `Code -> Download Zip` or by following [this link](https://codeload.github.com/Ahmad45123/guc-thesis-helper/zip/refs/heads/master).
+2. Extract the zip into some folder anywhere on your device.
+3. Download [Firefox Developer Edition](https://www.mozilla.org/en-US/firefox/developer/), the normal version of Firefox will **not** allow you to permanently load this extension.
+4. Go to `about:config`
+5. Set `xpinstall.signatures.required` to `false`
+6. Go to `about:addons`
+7. Click on the gear icon and select `Install Add-on From File...`
+8. Select 'guc_thesis_helper-1.5.1.xpi'
 
 ## Usage :checkered_flag:
 
